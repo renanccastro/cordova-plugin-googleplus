@@ -22,6 +22,10 @@ static void swizzleMethod(Class class, SEL destinationSelector, SEL sourceSelect
   swizzleMethod([AppDelegate class],
                 @selector(application:openURL:sourceApplication:annotation:),
                 @selector(identity_application:openURL:sourceApplication:annotation:));
+  swizzleMethod([AppDelegate class],
+		  		@selector(application:openURL:options:),
+		  	  	@selector(identity_application:openURL:options:));
+				
 }
 
 /** Google Sign-In SDK
@@ -56,6 +60,7 @@ static void swizzleMethod(Class class, SEL destinationSelector, SEL sourceSelect
         //call super
         return [self identity_application:app openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
     }
+}
 @end
 
 @implementation GooglePlus

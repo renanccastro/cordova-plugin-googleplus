@@ -109,6 +109,7 @@
     <framework src="AddressBook.framework" weak="true" />
     <framework src="CoreText.framework" weak="true" />
     <framework src="Security.framework" weak="true" />
+    <framework src="SafariServices.framework" weak="true" />
     <framework src="StoreKit.framework" weak="true" />
     <framework src="SystemConfiguration.framework" weak="true" />
     <framework src="libz.tbd" weak="true" />
